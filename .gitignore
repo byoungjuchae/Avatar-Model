@@ -1,0 +1,10 @@
+__pycache__
+.DS_Store
+out
+basicModel_neutral_lbs_10_207_0_v1.0.0.pkl
+experiments/
+mpips_smplify_public_v2.zip
+dataset/
+CLIP/
+neural_renderer/
+clip_ckpts/
