@@ -467,6 +467,7 @@ class Dataset(torch.utils.data.Dataset):
                 np.array([x_min, y_min]), np.array([x_max, y_max])
     
     def load_image(self, frame_name, bg_color, resize=True):
+        
         if cfg.task in ['mydemo', 'fashion'] or cfg.train.use_input_annot:
             imagepath = os.path.join(self.dataset_path, 'gt_image.png')
             maskpath = os.path.join(self.dataset_path, 'gt_mask.png')

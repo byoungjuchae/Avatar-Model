@@ -269,6 +269,7 @@ class Trainer(object):
             batch['iter_val'] = torch.full((1,), self.iter)
             data = cpu_data_to_gpu(
                 batch, exclude_keys=EXCLUDE_KEYS_TO_GPU)
+            
             if data.get('render_for_reference', False):
                 with torch.no_grad():
                     batch_ref = dict()

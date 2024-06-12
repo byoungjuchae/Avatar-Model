@@ -168,7 +168,8 @@ class Dataset(torch.utils.data.Dataset):
             for view in self.train_camera['all_views']:
                 gt_cameras["{}_{:02d}".format(self.train_frame_name, view)] = self.train_camera['all_views'][view]
         else:
-            with open(os.path.join(self.dataset_path+'_smpl', 'cameras.pkl'), 'rb') as f: 
+            #with open(os.path.join(self.dataset_path+'_smpl', 'cameras.pkl'), 'rb') as f: 
+            with open(os.path.join(self.dataset_path, 'cameras.pkl'), 'rb') as f: 
                 cameras = pickle.load(f)
             for k in cameras:
                 if self.train_frame_name in k:

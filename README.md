@@ -15,6 +15,9 @@ Official repository of "One-shot Implicit Animatable Avatars with Model-based Pr
 3D appearance of the human body with the help of a rough SMPL shape.
 3. A **segmentation-based sampling strategy** to create more realistic visual details and geometries for 3D avatars.
 
+## Preprocess
+CLIFF
+sh scripts/run_demo.sh
 
 ## Installation
 

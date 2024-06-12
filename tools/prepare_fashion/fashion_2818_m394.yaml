@@ -10,4 +10,4 @@ smpl_interval: 10
 
 output:
   dir: /home/dataset/fashion
-  name: 'fs2818_m394'
+  name: 'karina_m3772'

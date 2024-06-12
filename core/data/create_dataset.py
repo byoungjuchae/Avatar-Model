@@ -74,7 +74,9 @@ def create_dataset(data_type='train', start_frame=0):
     if data_type in ['freeview', 'tpose', 'movement']:
         args['skip'] = cfg.render_skip
     args['start_frame'] = start_frame
+
     dataset = _query_dataset(data_type)
+  
     dataset = dataset(**args)
     return dataset
 
