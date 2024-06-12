@@ -93,9 +93,10 @@ class Dataset(torch.utils.data.Dataset):
         cameras = self.load_train_cameras()
         mesh_infos = self.load_train_mesh_infos()
 
-        self.train_frame_idx = framelist.index(cfg.mesh.frame_name)
-        print(f' -- Frame Name: {cfg.mesh.frame_name}, Frame Idx: {self.train_frame_idx}')
-        self.total_frames = 1
+        #self.train_frame_idx = framelist.index(cfg.mesh.frame_name)
+        self.train_frame_idx = 0
+        #print(f' -- Frame Name: {cfg.mesh.frame_name}, Frame Idx: {self.train_frame_idx}')
+        self.total_frames = 100
 
         self.train_frame_name = framelist[self.train_frame_idx]
         self.train_camera = cameras[framelist[self.train_frame_idx]]
@@ -213,6 +214,7 @@ class Dataset(torch.utils.data.Dataset):
         return mesh_infos
 
     def load_train_frames(self):
+
         img_paths = list_files(os.path.join(self.dataset_path, 'images'),
                                exts=['.png'])
         return [split_path(ipath)[1] for ipath in img_paths]

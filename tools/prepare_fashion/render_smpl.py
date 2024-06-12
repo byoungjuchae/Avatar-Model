@@ -204,6 +204,8 @@ _, _, texture_default = nr.load_obj('/home/third_parties/smpl/smpl_uv.obj', load
 
 def main(argv):
     cfg = parse_config()
+    import pdb
+    pdb.set_trace()
     subject = cfg['dataset']['subject']
     sample_interval = cfg['smpl_interval']
     source_dir = cfg['dataset']['zju_mocap_path']

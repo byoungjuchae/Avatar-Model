@@ -3,11 +3,11 @@ import os
 
 class DatasetArgs(object):
     dataset_attrs = {}
-
+    
     subjects = ['313', '315', '377', '386', '387', '390', '392', '393', '394']
     subjects = subjects + [sub + '_smpl' for sub in subjects]
 
-    if cfg.category in ['human_nerf', 'elicit'] and (cfg.task in ['zju_mocap', 'mydemo', 'fashion']):
+    if cfg.category in ['human_nerf', 'elicit'] and (cfg.task in ['zju_mocap', 'mydemo', 'fashion','multi']):
         for sub in subjects:
             dataset_attrs.update({
                 f"zju_{sub}_train": {
@@ -22,6 +22,8 @@ class DatasetArgs(object):
                     "src_type": 'zju_mocap'
                 },
             })
+            
+    
     h36m_subjects = ['s1', 's5', 's6', 's7', 's8', 's9', 's11']
     h36m_subjects = h36m_subjects + [sub + '_smpl' for sub in h36m_subjects]
     if cfg.category in ['human_nerf', 'elicit'] and cfg.task == 'h36m':
