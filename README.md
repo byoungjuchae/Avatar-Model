@@ -16,7 +16,8 @@ Official repository of "One-shot Implicit Animatable Avatars with Model-based Pr
 3. A **segmentation-based sampling strategy** to create more realistic visual details and geometries for 3D avatars.
 
 ## Preprocess
-CLIFF
+CLIFF is requried to preprocess the custom image. 
+
 sh scripts/run_demo.sh
 
 ## Installation
