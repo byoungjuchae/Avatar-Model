@@ -5,3 +5,4 @@ https://user-images.githubusercontent.com/29389089/216925630-50f9226c-17ee-4d5f-
 _ELICIT creates free-viewpoint motion videos from a single image by constructing an animatable avatar NeRF representation in one-shot learning._
 
 
+It is my project to use ELICIT model. 
